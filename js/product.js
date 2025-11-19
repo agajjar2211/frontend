@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function addToCart(sku) {
-  fetch(`${api_base}/card/add`, { 
+  fetch(`${api_base}/cart/add`, { 
     method: "POST",
     headers: {
       "Content-Type": "application/json"
