@@ -1,5 +1,7 @@
+const api_base = "https://assignmentnaa3-image.onrender.com";
+
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("http://localhost:8080/product/get") // 🔁 Replace with your actual URL
+  fetch(`${api_base}/product/get`) 
     .then(response => response.json())
     .then(products => {
       const grid = document.getElementById("product-grid");
@@ -20,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function addToCart(sku) {
-  fetch("http://localhost:8080/cart/add", { // 🔁 Replace with your actual URL
+  fetch(`${api_base}/card/add`, { 
     method: "POST",
     headers: {
       "Content-Type": "application/json"
