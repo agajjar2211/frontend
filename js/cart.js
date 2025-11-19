@@ -1,7 +1,7 @@
 const api_base = "https://assignmentnaa3-image.onrender.com";
 
 document.addEventListener("DOMContentLoaded", () => {
-  fetch(`${api_base}/cart/get`) // 🔁 Replace with your actual URL
+  fetch(`${api_base}/cart/get`) 
     .then(res => res.json())
     .then(items => {
       const container = document.getElementById("cart-items");
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const div = document.createElement("div");
         div.className = "product";
 
-        const price = 129.99; // You can fetch real price if needed
+        const price = 129.99; 
         total += price * item.quantity;
 
         div.innerHTML = `
@@ -28,11 +28,11 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function removeItem(id) {
-  fetch(`${api_base}/cart/delete/${id}`, { method: "DELETE" }) // 🔁 Replace with your URL
+  fetch(`${api_base}/cart/delete/${id}`, { method: "DELETE" }) 
     .then(() => location.reload());
 }
 
 function emptyCart() {
-  fetch(`${api_base}/cart/delete`, { method: "DELETE" }) // 🔁 Replace with your URL
+  fetch(`${api_base}/cart/delete`, { method: "DELETE" }) 
     .then(() => location.reload());
 }
