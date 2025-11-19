@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Your Cart</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Your Cart</h1>
+    <button onclick="window.location.href='index.html'">Back to Store</button>
+    <button onclick="emptyCart()">Empty Cart</button>
+  </header>
+
+  <main>
+    <div id="cart-items" class="grid"></div>
+    <h2 id="total-cost">Total: $0</h2>
+  </main>
+
+  <script src="js/cart.js"></script>
+</body>
+</html>
