@@ -1,5 +1,7 @@
+const api_base = "https://assignmentnaa3-image.onrender.com";
+
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("http://localhost:8080/cart/get") // 🔁 Replace with your actual URL
+  fetch(`${api_base}/cart/get`) // 🔁 Replace with your actual URL
     .then(res => res.json())
     .then(items => {
       const container = document.getElementById("cart-items");
@@ -26,11 +28,11 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function removeItem(id) {
-  fetch(`http://localhost:8080/cart/delete/${id}`, { method: "DELETE" }) // 🔁 Replace with your URL
+  fetch(`${api_base}/cart/delete/${id}`, { method: "DELETE" }) // 🔁 Replace with your URL
     .then(() => location.reload());
 }
 
 function emptyCart() {
-  fetch("http://localhost:8080/cart/delete", { method: "DELETE" }) // 🔁 Replace with your URL
+  fetch(`${api_base}/cart/delete`, { method: "DELETE" }) // 🔁 Replace with your URL
     .then(() => location.reload());
 }
